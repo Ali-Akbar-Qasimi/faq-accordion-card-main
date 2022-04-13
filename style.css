@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Open+Sans:wght@300;400&family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+  background-color: white;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 70vh;
+  width: 80%;
+  border-radius: 20px;
+  max-width: 400px;
+}
+
+.container .images img {
+  width: 50%;
+  margin-top: -95px;
+  margin-left: 50%;
+  margin-bottom: 70px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.container .header {
+  font-size: 13px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container .questions {
+  padding: 0 50px;
+}
+
+.container .questions .question-container {
+  -webkit-transition: 200ms width ease-in-out;
+  transition: 200ms width ease-in-out;
+  border-bottom: 1px solid #e7e7e9;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  height: 40px;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
+  position: relative;
+}
+
+.container .questions .question-container input {
+  position: absolute;
+  width: 100%;
+  background-color: red;
+  color: red;
+  visibility: none;
+  cursor: pointer;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  bottom: 2px;
+}
+
+.container .questions .question-container .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  color: #787887;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.container .questions .question-container .question img {
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.container .questions .question-container .answer {
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  color: #787887;
+  font-weight: 400;
+  font-size: 13px;
+  max-width: 90%;
+  -webkit-transition: opacity 200ms ease-in-out,-webkit-transform 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out,-webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out,opacity 200ms ease-in-out;
+  transition: transform 200ms ease-in-out,opacity 200ms ease-in-out,-webkit-transform 200ms ease-in-out;
+}
+
+.container .questions .question-container.active {
+  height: 100px;
+}
+
+.container .questions .question-container.active .question {
+  font-weight: 700;
+  color: #4a4b5e;
+}
+
+.container .questions .question-container.active .question img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container .questions .question-container.active .answer {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-in-out,-webkit-transform 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out,-webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out,opacity 200ms ease-in-out;
+  transition: transform 200ms ease-in-out,opacity 200ms ease-in-out,-webkit-transform 200ms ease-in-out;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: 650px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-position: -200% 50%;
+    background-size: 80%;
+    height: 55vh;
+    max-width: 600px;
+  }
+  .container .images img {
+    margin-top: 50%;
+    margin-left: -38px;
+    width: 200px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .container .content {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
