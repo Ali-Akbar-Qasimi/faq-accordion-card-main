@@ -34,7 +34,7 @@ body {
   max-width: 400px;
 }
 
-.container .images img {
+.container .images .women {
   width: 50%;
   margin-top: -95px;
   margin-left: 50%;
@@ -122,7 +122,7 @@ body {
 }
 
 .container .questions .question-container.active {
-  height: 100px;
+  height: 110px;
 }
 
 .container .questions .question-container.active .question {
@@ -158,18 +158,43 @@ body {
     background-image: url("./images/bg-pattern-desktop.svg");
     background-position: -200% 50%;
     background-size: 80%;
-    height: 55vh;
-    max-width: 600px;
+    height: 70vh;
+    max-width: 70%;
   }
-  .container .images img {
-    margin-top: 50%;
-    margin-left: -38px;
-    width: 200px;
+  .container .images {
+    width: 50%;
+    position: relative;
+  }
+  .container .images .women {
+    margin-top: 30px;
+    margin-left: -19%;
+    width: 100%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   .container .content {
     margin-top: 20px;
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .content .header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container .content .questions {
+    padding: 0;
+    padding-right: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
